@@ -2,13 +2,13 @@
 
 ## Project Story
 
-**How profitable is a brewery in West Africa? Which territories consume more beer? Which brands dominate the market?** These were the key business questions I set out to answer through data.
+**"How profitable is a brewery in West Africa"? "Which territories consume more beer"? "Which brands dominate the market"?** These were the key business questions I set out to answer through data.
 
-This project tells the story of IBUWUMS Brewery Plc, an FMCG company operating across Anglophone and Francophone West African countries, by analyzing three years of sales and profit data — 2017, 2018, and 2019.
+This project tells the story of IBUWUMS Brewery Plc, an FMCG company operating across Anglophone and Francophone West African countries, by analyzing three years of sales and profit data: 2017, 2018, and 2019.
 
 ---
 
-## 🧭 The Journey: From Excel to Insights
+## The Journey: From Excel to Insights
 
 The dataset was provided in Excel, along with a set of over 20+ targeted business questions. Rather than jump straight into visualization, I took the following structured approach:
 
@@ -34,7 +34,7 @@ I merged all the `.csv` files into a single Excel workbook with 21 sheets. Then 
 
 ## Key Business Insights
 
-| 💼 Question | ✅ Insight |
+| Question |  Insight |
 |------------|------------|
 | What is the total profit between 2017 and 2019? | **$105.59M** was recorded as total profit |
 | Which year had the highest profit? | **2017** with **$38.5M** |
@@ -74,41 +74,40 @@ The visuals are organized across **three interactive dashboards**:
    - Best-performing brand per region
    - National beer consumption breakdown
 
-Screenshots:
-![Dashboard 1](./screenshots/IBUWUMS..jpg)
-![Dashboard 2](./screenshots/IBIWUMS...jpg)
-![Dashboard 3](./screenshots/IBIWUMS......jpg)
-
 ---
 
-## 📌 Recommendations
+## Recommendations
 
-🔹 **Leverage High-Performing Territories:**  
+**Leverage High-Performing Territories:**  
 Focus expansion efforts on Anglophone markets, which account for nearly 60% of profits.
 
-🔹 **Promote in Low-Performing Months:**  
-Introduce sales promotions in **April and December**, which historically record lower profits.
+**Promote in Low-Performing Months:**  
+Introduce sales promotions in April and December, which historically record lower profits.
 
-🔹 **Senegal = High Opportunity:**  
+**Senegal = High Opportunity:**  
 With the highest beer consumption, Senegal is ideal for launching new products or upscaling distribution.
 
-🔹 **Optimize Budweiser Distribution:**  
-Consumption is highest in the West, but regional sales show gaps in the South East — suggesting a need for better alignment between **demand and supply**.
+**Optimize Budweiser Distribution:**  
+Consumption is highest in the West, but regional sales show gaps in the South East — suggesting a need for better alignment between demand and supply.
 
-🔹 **Brand Growth Strategy:**  
+**Brand Growth Strategy:**  
 Brands like Hero and Castle Lite are dominating across regions. Consider bundling or cross-promotions with malt products like Grand Malt in underperforming zones.
 
 ---
+## 🔗 Project Access
 
-## 🧰 Tools Used
+You can download the Power BI file [here](https://app.powerbi.com/groups/me/reports/147e1bea-2328-4b70-bb40-82e5406cdba7/8c9ccc818b89c77d3092?experience=power-bi&clientSideAuth=0)
 
-- **🟡 Microsoft Excel** – Initial data cleaning and transformation
-- **🟢 MySQL Workbench** – SQL querying for deeper analysis
-- **🔵 Power BI** – Visualizations and dashboard development
+---
+## Tools Used
+
+- **Microsoft Excel** – Initial data cleaning and transformation
+- **MySQL Workbench** – SQL querying for deeper analysis
+- **Power BI** – Visualizations and dashboard development
 
 ---
 
-## 🧠 Skills Demonstrated
+## Skills Demonstrated
 
 - Data Cleaning & Preparation  
 - SQL Query Writing (Aggregations, Filters, Joins)  
@@ -118,3 +117,15 @@ Brands like Hero and Castle Lite are dominating across regions. Consider bundlin
 - Stakeholder-Centric Design
 
 ---
+
+## 📷 Dashboard Preview
+
+---
+
+
+🙋‍♂️ Author
+-  **Oluwatobi Akinwumi**
+- Chartered Accountant & Data Analyst
+- 📍 Abuja, Nigeria
+-  +2348064549683
+-  📧 tobbysam247@gmail.com
