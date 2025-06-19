@@ -120,6 +120,14 @@ You can download the Power BI file [here](https://app.powerbi.com/groups/me/repo
 
 ## 📷 Dashboard Preview
 
+![Dashboard Screenshot](https://github.com/Tobbysam247/Ibuwums-Brewery-Plc/blob/main/IBUWUMS%20Dashboard%201.jpg)
+
+
+![Dashboard Screenshot](https://github.com/Tobbysam247/Ibuwums-Brewery-Plc/blob/main/IBIWUMS%20Dashboard%202.jpg)
+
+
+![Dashboard Screenshot](https://github.com/Tobbysam247/Ibuwums-Brewery-Plc/blob/main/IBIWUMS%20Dashboard%203.jpg)
+
 ---
 
 
