@@ -133,7 +133,7 @@ You can download the Power BI file [here](https://app.powerbi.com/groups/me/repo
 
 🙋‍♂️ Author
 -  **Oluwatobi Akinwumi**
-- Chartered Accountant & Data Analyst
+-  Auditor & Data Analyst
 - 📍 Abuja, Nigeria
 -  +2348064549683
 -  📧 tobbysam247@gmail.com
