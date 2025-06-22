@@ -94,7 +94,7 @@ Consumption is highest in the West, but regional sales show gaps in the South Ea
 Brands like Hero and Castle Lite are dominating across regions. Consider bundling or cross-promotions with malt products like Grand Malt in underperforming zones.
 
 ---
-## 🔗 Project Access
+## Project Access
 
 You can download the Power BI file [here](https://app.powerbi.com/groups/me/reports/147e1bea-2328-4b70-bb40-82e5406cdba7/8c9ccc818b89c77d3092?experience=power-bi&clientSideAuth=0)
 
