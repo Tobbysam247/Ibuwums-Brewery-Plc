@@ -19,7 +19,7 @@ The raw dataset contained mixed columns, inconsistent dates, and missing values.
 - Filled missing values appropriately.
 
 ### Step 2: SQL for Analysis
-I exported the cleaned dataset to MySQL Workbench where I:
+I exported the cleaned dataset to MySQL Workbench, where I:
 - Queried the data to extract meaningful KPIs,
 - Answered each of the 20+ business questions using aggregate functions, joins, and date filters,
 - Exported each result as a `.csv`.
@@ -85,10 +85,10 @@ Focus expansion efforts on Anglophone markets, which account for nearly 60% of p
 Introduce sales promotions in April and December, which historically record lower profits.
 
 **Senegal = High Opportunity:**  
-With the highest beer consumption, Senegal is ideal for launching new products or upscaling distribution.
+With the highest beer consumption, Senegal is an ideal market for launching new products or expanding distribution.
 
 **Optimize Budweiser Distribution:**  
-Consumption is highest in the West, but regional sales show gaps in the South East — suggesting a need for better alignment between demand and supply.
+Consumption is highest in the West, but regional sales show gaps in the South East, suggesting a need for better alignment between demand and supply.
 
 **Brand Growth Strategy:**  
 Brands like Hero and Castle Lite are dominating across regions. Consider bundling or cross-promotions with malt products like Grand Malt in underperforming zones.
@@ -120,18 +120,21 @@ You can download the Power BI file [here](https://app.powerbi.com/groups/me/repo
 
 ## 📷 Dashboard Preview
 
-![Dashboard Screenshot](https://github.com/Tobbysam247/Ibuwums-Brewery-Plc/blob/main/IBUWUMS%20Dashboard%201.jpg)
+![IBUWUMS Dashboard 1](https://github.com/user-attachments/assets/2a9f31f5-d42a-4fc0-a219-352a838e3e47)
 
 
-![Dashboard Screenshot](https://github.com/Tobbysam247/Ibuwums-Brewery-Plc/blob/main/IBIWUMS%20Dashboard%202.jpg)
+
+![IBIWUMS Dashboard 2](https://github.com/user-attachments/assets/d9855b0c-fd14-402f-85e2-eaf8c3bdc38f)
 
 
-![Dashboard Screenshot](https://github.com/Tobbysam247/Ibuwums-Brewery-Plc/blob/main/IBIWUMS%20Dashboard%203.jpg)
+
+![IBIWUMS Dashboard 3](https://github.com/user-attachments/assets/d305cd53-caed-4bdc-a391-3714b61eec6d)
+
 
 ---
 
 
-🙋‍♂️ Author
+      Author
 -  **Oluwatobi Akinwumi**
 -  Auditor & Data Analyst
 - 📍 Abuja, Nigeria
