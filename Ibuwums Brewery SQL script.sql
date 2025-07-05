@@ -1,0 +1,406 @@
+SELECT * FROM intl_fmcg.international_fmcg_sql_assessment;
+
+SELECT
+SUM(profit) AS Total_Profit
+FROM
+intl_fmcg.international_fmcg_sql_assessment;
+
+ALTER TABLE intl_fmcg.international_fmcg_sql_assessment
+RENAME TO FMCG;
+
+SELECT * FROM fmcg;
+
+SELECT
+SUM(profit) AS Total_Profit
+FROM
+FMCG;
+
+SELECT
+countries,
+CASE
+WHEN 'Nigeria' then 'ANGLOPHONE'
+WHEN 'Benin' then 'FRANCOPHONE'
+WHEN 'Togo' then 'FRANCOPHONE'
+WHEN 'Senegal' then 'FRANCOPHONE'
+WHEN 'Ghana' then 'ANGLOPHONE'
+ELSE 'Nil'
+END AS TERRITORIES
+FROM FMCG;
+
+
+SELECT DISTINCT countries FROM FMCG;
+
+
+SELECT
+  countries,
+  CASE
+    WHEN UPPER(TRIM(countries)) = 'NIGERIA' THEN 'ANGLOPHONE'
+    WHEN UPPER(TRIM(countries)) = 'BENIN' THEN 'FRANCOPHONE'
+    WHEN UPPER(TRIM(countries)) = 'TOGO' THEN 'FRANCOPHONE'
+    WHEN UPPER(TRIM(countries)) = 'SENEGAL' THEN 'FRANCOPHONE'
+    WHEN UPPER(TRIM(countries)) = 'GHANA' THEN 'ANGLOPHONE'
+    ELSE 'Nil'
+  END AS TERRITORIES
+FROM FMCG;
+
+select * FROM FMCG;
+
+ALTER TABLE FMCG
+ADD COLUMN TERRITORIES varchar(255);
+
+UPDATE FMCG
+SET territories = CASE
+  WHEN UPPER(TRIM(countries)) = 'NIGERIA' THEN 'ANGLOPHONE'
+  WHEN UPPER(TRIM(countries)) = 'BENIN' THEN 'FRANCOPHONE'
+  WHEN UPPER(TRIM(countries)) = 'TOGO' THEN 'FRANCOPHONE'
+  WHEN UPPER(TRIM(countries)) = 'SENEGAL' THEN 'FRANCOPHONE'
+  WHEN UPPER(TRIM(countries)) = 'GHANA' THEN 'ANGLOPHONE'
+  ELSE 'Nil'
+END;
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE FMCG
+SET territories = CASE
+  WHEN UPPER(TRIM(countries)) = 'NIGERIA' THEN 'ANGLOPHONE'
+  WHEN UPPER(TRIM(countries)) = 'BENIN' THEN 'FRANCOPHONE'
+  WHEN UPPER(TRIM(countries)) = 'TOGO' THEN 'FRANCOPHONE'
+  WHEN UPPER(TRIM(countries)) = 'SENEGAL' THEN 'FRANCOPHONE'
+  WHEN UPPER(TRIM(countries)) = 'GHANA' THEN 'ANGLOPHONE'
+  ELSE 'Nil'
+END;
+
+SELECT
+territories, sum(profit) AS Total_profit
+FROM
+FMCG
+group by
+territories;
+  
+SELECT countries, territories, YEARS, profit
+FROM FMCG
+LIMIT 10;
+
+SELECT YEARS, SUM(profit)
+FROM FMCG
+GROUP BY YEARS;
+
+SELECT
+  territories,
+  SUM(CASE WHEN YEARS = 2017 THEN profit ELSE 0 END) AS Profit_2017,
+  SUM(CASE WHEN YEARS = 2018 THEN profit ELSE 0 END) AS Profit_2018,
+  SUM(CASE WHEN YEARS = 2019 THEN profit ELSE 0 END) AS Profit_2019
+FROM
+  FMCG
+GROUP BY
+  territories;
+
+
+SELECT
+  territories,
+SUM(CASE WHEN YEARS = 2019 THEN profit ELSE 0 END) AS Profit_2019
+FROM
+  FMCG
+GROUP BY
+  territories;
+  
+
+  
+SELECT DISTINCT YEARS
+FROM FMCG;
+
+
+SELECT
+countries, SUM(profit) AS total_profit
+FROM
+FMCG
+GROUP BY countries
+ORDER BY total_profit DESC;
+
+
+SELECT
+  countries,
+SUM(CASE WHEN YEARS = 2019 THEN profit ELSE 0 END) AS Profit_2019
+FROM
+  FMCG
+GROUP BY
+  countries
+ORDER BY Profit_2019 DESC;
+
+
+SELECT
+YEARS, SUM(PROFIT) AS total_profit
+FROM
+FMCG
+GROUP BY YEARS
+order by total_profit desc;
+
+
+select * from fmcg;
+
+
+SELECT
+MONTHS, SUM(PROFIT) AS total_profit
+FROM
+FMCG
+group by MONTHS
+order by total_profit asc;
+
+
+SELECT
+MONTHS, MIN(PROFIT) AS minimum_profit
+FROM
+FMCG
+WHERE
+YEARS = 2018 AND MONTHS = 'December'
+GROUP BY MONTHS;
+
+
+ SELECT
+  MONTHS, 
+  SUM(PROFIT) AS total_profit,
+  SUM(PROFIT) * 100.0 / SUM(SUM(PROFIT)) OVER () AS profit_percentage
+FROM
+  FMCG 
+WHERE
+  YEARS = 2019
+GROUP BY
+  MONTHS
+ORDER BY
+  total_profit DESC;
+  
+  
+  SELECT
+  MONTHS, 
+  SUM(PROFIT) AS total_profit,
+  CONCAT(ROUND(SUM(PROFIT) * 100.0 / SUM(SUM(PROFIT)) OVER (), 2), '%') AS profit_percentage
+FROM
+  FMCG 
+WHERE
+  YEARS = 2019
+GROUP BY
+  MONTHS
+ORDER BY
+  total_profit DESC;
+
+
+SELECT
+BRANDS,
+MAX(profit) AS Maximum_profit
+FROM
+FMCG
+WHERE
+countries = 'SENEGAL'
+GROUP by
+BRANDS
+order by Maximum_profit DESC
+LIMIT 1;
+
+
+USE INTL_FMCG;
+
+SELECT
+MONTHS, SUM(PROFIT) AS total_profit
+FROM
+FMCG
+group by MONTHS;
+
+
+SELECT 
+    BRANDS, SUM(quantity) AS Qty_consumed
+FROM
+    FMCG
+WHERE
+TERRITORIES = 'FRANCOPHONE'
+AND
+  YEARS <> 2017
+  GROUP BY BRANDS
+ORDER BY 'Qty_consumed' DESC
+LIMIT 3; 
+
+
+SELECT * FROM FMCG;
+
+
+SELECT
+BRANDS, SUM(QUANTITY) AS total_Qty
+FROM
+FMCG
+WHERE
+COUNTRIES = 'Ghana'
+GROUP BY BRANDS
+order by total_Qty DESC
+LIMIT 2;
+
+
+SELECT
+BRANDS, SUM(QUANTITY) AS total_Qty
+FROM
+FMCG
+WHERE
+brands not like '%malt'
+AND 
+COUNTRIES = 'Nigeria'
+GROUP BY BRANDS
+order by total_Qty DESC;
+
+
+
+
+SELECT
+  BRANDS,
+  TERRITORIES,
+  SUM(QUANTITY) AS Total_Qty
+FROM
+  FMCG
+WHERE
+  BRANDS LIKE '%malt'
+  AND TERRITORIES = 'ANGLOPHONE'
+  AND YEARS BETWEEN 2018 AND 2019
+GROUP BY
+  TERRITORIES, BRANDS
+ORDER BY
+  SUM(QUANTITY) DESC
+LIMIT 1;
+
+
+SELECT * FROM FMCG;
+
+
+
+SELECT
+BRANDS,
+SUM(QUANTITY) AS Qty_Sold
+FROM
+FMCG
+WHERE
+YEARS = 2019
+AND
+COUNTRIES = 'NIGERIA'
+GROUP BY BRANDS
+ORDER BY Qty_Sold DESC
+LIMIT 1;
+
+
+
+SELECT
+BRANDS, SUM(QUANTITY) AS total_quantity
+FROM
+FMCG
+WHERE
+COUNTRIES = 'Nigeria'
+AND
+ REGION = 'southsouth'
+GROUP BY
+ BRANDS
+ORDER BY
+ total_quantity DESC
+LIMIT 1;
+
+
+
+SELECT
+BRANDS,
+SUM(QUANTITY) AS total_quantity_consumed
+FROM
+FMCG
+WHERE
+COUNTRIES = 'Nigeria'
+AND 
+BRANDS 
+NOT LIKE '%malt'
+GROUP BY
+ BRANDS
+ ORDER BY 
+total_quantity_consumed ASC;
+
+
+SELECT
+SUM(QUANTITY) AS total_quantity_consumed
+FROM
+FMCG
+WHERE
+COUNTRIES = 'Nigeria'
+AND 
+BRANDS 
+NOT LIKE '%malt';
+
+
+
+SELECT
+REGION, SUM(QUANTITY) AS total_quantity_consumed
+FROM
+FMCG
+WHERE
+COUNTRIES = 'Nigeria'
+AND
+ BRANDS = 'Budweiser'
+GROUP BY 
+REGION
+ORDER BY 
+total_quantity_consumed DESC;
+
+
+
+
+SELECT 
+    REGION, SUM(quantity) AS total_quantity_consumed
+FROM
+    FMCG
+WHERE
+    COUNTRIES = 'Nigeria' AND YEARS = 2019
+        AND
+        brands = 'Budweiser'
+GROUP BY 
+REGION
+ORDER BY 
+total_quantity_consumed DESC;
+
+
+
+SELECT
+  COUNTRIES, SUM(quantity) AS total_quantity
+FROM
+    FMCG
+WHERE
+    brands NOT LIKE '%malt'
+GROUP BY COUNTRIES
+ORDER BY total_quantity DESC
+LIMIT 1;
+
+
+SELECT * FROM FMCG;
+
+
+SELECT
+SALES_REP,
+SUM(QUANTITY) AS Quantity_sold
+FROM
+FMCG
+WHERE
+BRANDS = 'budweiser'
+AND
+COUNTRIES = 'Senegal'
+GROUP BY SALES_REP
+ORDER BY
+Quantity_sold DESC
+LIMIT 1;
+
+
+
+SELECT
+COUNTRIES,
+SUM(PROFIT) AS Total_Profit
+FROM
+FMCG
+WHERE 
+MONTHS IN ('OCTOBER', 'NOVEMBER', 'DECEMBER')
+AND YEARS = 2019
+GROUP BY 
+COUNTRIES
+ORDER BY Total_Profit DESC
+LIMIT 1;
+
+
+USE INTL_FMCG;
+SELECT * FROM FMCG;
